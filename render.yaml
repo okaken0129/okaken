@@ -1,0 +1,22 @@
+databases:
+  - name: steve_DB
+    databaseName: steve_db_vaid
+    user: steve
+    region: singapore
+
+services:
+  - type: web
+    name: steve
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: steve_DB
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+
