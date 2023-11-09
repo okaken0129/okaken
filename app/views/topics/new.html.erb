@@ -1,0 +1,8 @@
+<p>Q1.どちらかというと 初対面の人との会話は あまり得意ではなない</p>
+<%= form_for(@topic, class: 'form-horizontal', role: 'form') do |f| %>
+  <%= f.radio_button :question, "1" %>
+  <%= label_tag :question_1, "はい" %>
+  <%= f.radio_button :question, "2" %>
+  <%= label_tag :question_2, "いいえ" %>
+  <input type="submit" value="次へ">
+<% end %>

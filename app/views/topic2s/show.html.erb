@@ -1,0 +1,30 @@
+<% if @topic2.question2 == 3  %>
+  <%= form_for(@topic3) do |f| %>
+    <p>Q3.会議や話し合いでは、 議論をまとめたり整理する 役割が多い</p>
+    <%= f.radio_button :question3, "7" %>
+    <%= label_tag :question_7, "はい" %>
+    <%= f.radio_button :question3, "8" %>
+    <%= label_tag :question_8, "いいえ" %>
+  <input type="submit" value="次へ">
+  <% end %>
+<% end %>
+<% if @topic2.question2 == 4 || @topic2.question2 == 6 %>
+  <%= form_for(@topic3) do |f| %>
+    <p>Q3.頭の中であれこれ連想して 考えるタイプだ</p>
+    <%= f.radio_button :question3, "9" %>
+    <%= label_tag :question_9, "はい" %>
+    <%= f.radio_button :question3, "10" %>
+    <%= label_tag :question_10, "いいえ" %>
+    <input type="submit" value="次へ">
+  <% end %>
+<% end %>
+<% if @topic2.question2 == 5  %>
+  <%= form_for(@topic3) do |f| %>
+    <p>Q3.言いづらいことでも その人のためになることで あれば相手に伝える</p>
+    <%= f.radio_button :question3, "11" %>
+    <%= label_tag :question_11, "はい" %>
+    <%= f.radio_button :question3, "12" %>
+    <%= label_tag :question_12, "いいえ" %>
+  <input type="submit" value="次へ">
+  <% end %>
+<% end %>

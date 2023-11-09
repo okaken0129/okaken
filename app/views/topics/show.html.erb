@@ -1,0 +1,20 @@
+<% if @topic.question == 1  %>
+  <%= form_for(@topic2) do |f| %>
+    <p>Q2.やることが明確に 決められる方が 取り組みやすい/p>
+    <%= f.radio_button :question2, "3" %>
+    <%= label_tag :question_3, "はい" %>
+    <%= f.radio_button :question2, "4" %>
+    <%= label_tag :question_4, "いいえ" %>
+  <input type="submit" value="次へ">
+  <% end %>
+<% end %>
+<% if @topic.question == 2  %>
+  <%= form_for(@topic2) do |f| %>
+    <p>Q2.休日は外に出かける ことのほうが 相対的に多い</p>
+    <%= f.radio_button :question2, "5" %>
+    <%= label_tag :question_5, "はい" %>
+    <%= f.radio_button :question2, "6" %>
+    <%= label_tag :question_6, "いいえ" %>
+    <input type="submit" value="次へ">
+  <% end %>
+<% end %>

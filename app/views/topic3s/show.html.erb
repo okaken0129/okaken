@@ -1,0 +1,40 @@
+<% if @topic3.question3 == 7  %>
+  <%= form_for(@topic4) do |f| %>
+    <p>Q4.仮に誰と働くか選べるなら、 企業選びで重要なのは 「やりたいこと」よりも 「だれと働くか」である</p>
+    <%= f.radio_button :question4, "13" %>
+    <%= label_tag :question_13, "はい" %>
+    <%= f.radio_button :question4, "14" %>
+    <%= label_tag :question_14, "いいえ" %>
+  <input type="submit" value="次へ">
+  <% end %>
+<% end %>
+<% if @topic3.question3 == 8 || @topic3.question3 == 9 %>
+  <%= form_for(@topic4) do |f| %>
+    <p>Q4.自分の直観や感覚を 大切な判断材料の 1つとしている</p>
+    <%= f.radio_button :question4, "15" %>
+    <%= label_tag :question_15, "はい" %>
+    <%= f.radio_button :question4, "16" %>
+    <%= label_tag :question_16, "いいえ" %>
+    <input type="submit" value="次へ">
+  <% end %>
+<% end %>
+<% if @topic3.question3 == 10 || @topic3.question3 == 12 %>
+  <%= form_for(@topic4) do |f| %>
+    <p>Q4.たまに自分のことよりも 相手のことを優先して しまうことがある</p>
+    <%= f.radio_button :question4, "17" %>
+    <%= label_tag :question_17, "はい" %>
+    <%= f.radio_button :question4, "18" %>
+    <%= label_tag :question_18, "いいえ" %>
+  <input type="submit" value="次へ">
+  <% end %>
+<% end %>
+<% if @topic3.question3 == 11  %>
+  <%= form_for(@topic4) do |f| %>
+    <p>Q4.仕事において 最も重要なのは 論理ではなく感情だ</p>
+    <%= f.radio_button :question4, "19" %>
+    <%= label_tag :question_19, "はい" %>
+    <%= f.radio_button :question4, "20" %>
+    <%= label_tag :question_20, "いいえ" %>
+  <input type="submit" value="次へ">
+  <% end %>
+<% end %>
